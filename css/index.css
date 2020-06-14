@@ -26,10 +26,14 @@ body {
 }
 
 
-.cell heading {
+cell heading {
       
   display: inline-flex;
   padding-right: 5px;
+}
+
+search-button {
+  display: inline-flex;
 }
 
 /*
