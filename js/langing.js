@@ -17,6 +17,16 @@
     function completeRequest(result) {
        
         console.log('Response received from API: ', result);
+        var i;
+        for (i = 0; i < result.length; i++) {
+            $('#stats').append($('<div class="row ">'+
+            '<div class="cell "><div>'+result[i].state+'</div></div>'
+            +'<div class="cell "><div>'+result[i].hospital+'</div></div>'
+            +'<div class="cell "><div>'+result[i].total+'</div></div>'
+            +'<div class="cell "><div>'+result[i].vacant+'</div></div>'
+            +'<div class="cell "><div>'+result[i].occupied+'</div></div>'
+            +'</div>'))
+        } 
         
     }
 
