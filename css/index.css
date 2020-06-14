@@ -21,6 +21,15 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+    
+   
+}
+
+
+.cell heading {
+      
+  display: inline-flex;
+  padding-right: 5px;
 }
 
 /*
@@ -506,3 +515,5 @@ h1{
         page-break-after: avoid;
     }
 }
+
+
