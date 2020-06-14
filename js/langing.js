@@ -18,7 +18,7 @@
        
         console.log('Response received from API: ', result);
         var i;
-        $('#data').epmty();
+        $('#data').empty();
         $('#stats').append('<div id="data" ></div>');
         for (i = 0; i < result.length; i++) {
             $('#data').append($('<div class="row ">'+
