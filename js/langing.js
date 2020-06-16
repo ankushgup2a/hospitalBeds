@@ -1,6 +1,6 @@
 (function rideScopeWrapper($) {
    
-    function requestUnicorn() {
+    function getHospitalStats() {
         $.ajax({
             method: 'GET',
             url: _config.api.invokeUrl + '/gethospitalstats',            
@@ -14,6 +14,19 @@
         });
     }
 
+    function searchHospitals(q) {
+        $.ajax({
+            method: 'GET',
+            url: _config.api.invokeUrl + '/searchhospitalbeds?search='+q,            
+            contentType: 'application/json',
+            success: completeRequest,
+            error: function ajaxError(jqXHR, textStatus, errorThrown) {
+                console.error('Error requesting ride: ', textStatus, ', Details: ', errorThrown);
+                console.error('Response: ', jqXHR.responseText);
+                alert('An error occured when requesting your unicorn:\n' + jqXHR.responseText);
+            }
+        });
+    }
     function completeRequest(result) {
        
         console.log('Response received from API: ', result);
@@ -32,15 +45,21 @@
         
     }
 
-    // Register click handler for #request button
+    // Register click handler for #search button
     $(function onDocReady() {
         
-        
+        $(".search-button").on("click",function(t){
+            t.preventDefault();
+            if($('.searchInput').val()) {
+                searchHospitals($('.searchInput').val());
+            }
+            
+        });
 
         if (!_config.api.invokeUrl) {
             $('#noApiMessage').show();
         }
-        requestUnicorn();
+        getHospitalStats();
     });
 
     function displayUpdate(text) {
