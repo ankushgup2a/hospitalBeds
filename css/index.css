@@ -25,11 +25,15 @@ body {
    
 }
 
-
-cell heading {
+row heading {
       
-  display: inline-flex;
+  
   padding-right: 5px;
+}
+
+column heading {
+      
+width: 20% !important;
 }
 
 search-button {
@@ -136,8 +140,7 @@ body{
 
 
 header{
-  width: 100vw;
-  padding: 30px 0 100px;
+  background: cadetblue;
 }
 
 header img{
