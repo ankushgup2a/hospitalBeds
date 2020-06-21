@@ -48,9 +48,9 @@
     // Register click handler for #search button
     $(function onDocReady() {
         
-        $('.search-button').keypress(function(e) {
-            var key = e.which;
-            if (key == 13) // the enter key code
+        $(".search-button").keypress(function(e) {
+            var key = (event.keyCode ? event.keyCode : event.which);
+            if (key == '13') // the enter key code
             {
                 t.preventDefault();
                 if($('.searchInput').val()) {
