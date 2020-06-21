@@ -37,7 +37,8 @@ width: 20% !important;
 }
 
 search-button {
-  display: inline-flex;
+  display: inline;
+  vertical-align: sub;
 }
 
 /*
@@ -205,7 +206,7 @@ header img{
 
 
 input[type=text], input[type=password], input[type=email] {
-    width: 100%;
+    width: 90%;
     padding: 12px 0;
     margin: 10px 0 30px;
     display: inline-block;
