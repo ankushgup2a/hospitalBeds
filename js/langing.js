@@ -52,7 +52,7 @@
             var key = (event.keyCode ? event.keyCode : event.which);
             if (key == '13') // the enter key code
             {
-                t.preventDefault();
+                e.preventDefault();
                 if($('.searchInput').val()) {
                     searchHospitals($('.searchInput').val());
                 } else {
