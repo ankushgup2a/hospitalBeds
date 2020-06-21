@@ -36,7 +36,7 @@ column heading {
 width: 20% !important;
 }
 
-search-button {
+.search-button {
   display: inline;
   vertical-align: sub;
 }
